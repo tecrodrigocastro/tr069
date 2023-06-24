@@ -4,10 +4,10 @@ function cliente(args, callback){
     let urlbase = "http://localhost:3000"
     http
     .get(urlbase+'/api/mac/Z94k8opK3mlJhDLaWVN7Qhd6KPdYB087BeCty6teQyKLnK49BP/'+args, (res) => {
-    //   if (res.statusCode !== 200)
-    //     return callback(
-    //       new Error(`Request failed (status code: ${res.statusCode})`)
-    //     );
+      if (res.statusCode !== 200)
+        return callback(
+          new Error(`Request failed (status code: ${res.statusCode})`)
+        );
 
         let rawData = "";
         res.on("data", (chunk) => (rawData += chunk));
@@ -27,8 +27,8 @@ function cliente(args, callback){
             ssid5g: ssid5g,
             password: password
         }
-        console.log(result)
-      // callback(null, result);
+        //console.log(result)
+       callback(null, result);
       });
 
     })
@@ -38,5 +38,5 @@ function cliente(args, callback){
         });
 }
 
-cliente('40:3F:8C:9B:3A:A6', null)
-//exports.getCliente = cliente;
+//cliente('98:DA:C4:FF:07:FA', null)
+exports.getCliente = cliente;
