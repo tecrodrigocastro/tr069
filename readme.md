@@ -62,8 +62,8 @@ Com a pasta criada, copie os arquivos localizado na pasta ext do projeto para a 
     chmod 600 /opt/genieacs/ext/getClientes
     chmod 600 /opt/genieacs/ext/getMacwan
 
-Após isso acesse ambos arquivos, getClientes e getMacwan que copiamos, pois iremos adicionar o token que foi criado dentro do arquivo .env e adicionar o nome do provedor para concatenar com o SSSID e SENHA do wifi.</br></br>
-O SSID do roteador é gerado usando a seguinte moneclatura PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC para o 2.4 </br>
+Após isso acesse ambos arquivos, getClientes e getMacwan que copiamos, pois iremos adicionar o token que foi criado dentro do arquivo .env e adicionar o nome do provedor para concatenar com o SSSID e SENHA do wifi.</br>
+O SSID do roteador é gerado usando a seguinte moneclatura </br></br> PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC para o 2.4 </br>
 *EXEMPLO: JEFFSON_PROVEDOR_44D0*</br> </br>
 PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC_5G para o 5GHZ</br>
 *EXEMPLO: JEFFSON_PROVEDOR_44D0_5G*</br> </br>
