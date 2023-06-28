@@ -3,15 +3,17 @@ Esse modulo de integração é integrada com o ERP Hubsoft, na qual contém a fu
 A auto configuração é feita em dois casos:
 - Roteadores novos (mac wan não vinculada ao serviço do cliente)
 - Roteadores resetados (mac wan vinculado ao serviço do cliente)
+
 </br>
 Esse projeto permite a alteração dos seguintes campos de forma automatica:
 </br>
+</br>
+
 - Usuario e senha do pppoe
 - SSID e Senha do Wi-Fi 2.4Ghz e 5Ghz
 
-Para esse projeto funcionar 
-
-corretamente, quando o roteador novo estiver sendo instalado, é necessario que o Técnico esteja com a Ordem de Serviço em execução e o equipamento (CPE) no estoque do Técnico.</br>
+</br>
+Para esse projeto funcionar corretamente, quando o roteador novo estiver sendo instalado, é necessario que o Técnico esteja com a Ordem de Serviço em execução e o equipamento (CPE) no estoque do Técnico.</br>
 Além disso todos as CPE precisa obrigatóriamente conter o MAC LAN do roteador *(É o mesmo mac que vem no fundo do Roteador e na caixa do equipamento)* dentro do campo mac do produto, que pode ser adicionado no momento do cadastro da compra do produto ou editado em estoque->itens de produto.</br>
 Como também é necessario acesso ao banco de dados do sistema no modo leitura, devido que a API publica do ERP HUBSOFT não oferece a rota para consultar os dados do cliente via mac wan e nem mac lan.
 
