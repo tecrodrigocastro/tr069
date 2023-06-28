@@ -14,8 +14,10 @@ Além disso todos as CPE precisa obrigatóriamente conter o MAC LAN do roteador 
 Como também é necessario acesso ao banco de dados do sistema no modo leitura, devido que a API publica do ERP HUBSOFT não oferece a rota para consultar os dados do cliente via mac wan e nem mac lan.
 
 --------
+
 ***ATENÇÃO*** 
 *DEIXAR OS DADOS EM UM SERVIDOR SEGURO PARA EVITAR VAZAMENTO DA CRENDENCIAIS, PREFERENCIALMENTE INSTALE A API E O GENIEACS EM UM SERVIDOR LOCAL E IP PRIVADO E SOLICITE QUE LIBERE O ACESSO AO BANCO APENAS PARA O IP DO SERVIDOR PARA MAIOR SEGURANÇA*
+
 --------------------
 ### Instalação GenieACS
 O passo a passo de instalação está disponivel em https://blog.remontti.com.br/6001, os demais passos abaixo só devem ser feitas após a instalação.
