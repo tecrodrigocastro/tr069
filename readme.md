@@ -16,7 +16,7 @@ Como também é necessario acesso ao banco de dados do sistema no modo leitura, 
 --------
 
 ***ATENÇÃO*** 
-*DEIXAR OS DADOS EM UM SERVIDOR SEGURO PARA EVITAR VAZAMENTO DA CRENDENCIAIS, PREFERENCIALMENTE INSTALE A API E O GENIEACS EM UM SERVIDOR LOCAL E IP PRIVADO E SOLICITE QUE LIBERE O ACESSO AO BANCO APENAS PARA O IP DO SERVIDOR PARA MAIOR SEGURANÇA*
+*DEIXAR OS DADOS EM UM SERVIDOR SEGURO PARA EVITAR VAZAMENTO DAS CRENDENCIAIS, PREFERENCIALMENTE INSTALE A API E O GENIEACS EM UM MESMO SERVIDOR LOCAL E IP PRIVADO E SOLICITE QUE LIBERE O ACESSO AO BANCO APENAS PARA O IP DO SERVIDOR PARA MAIOR SEGURANÇA*
 
 --------------------
 ### Instalação GenieACS
@@ -47,9 +47,9 @@ os parametros que devem ser alterados são:
     vi .env
 Após o arquivo .env configurado verique se a pasta ext se encontra criada no diretório.
 
-    ls -l /opt/genieacs/ext 
+    ls -l /opt/genieacs/
 
-se não existir, crie a pasta e conceda a permissão para o usuario genieacs criado no momento da instalação
+se não existir, crie a pasta e conceda a permissão para o usuario genieacs, criado no momento da instalação
 
     mkdir /opt/genieacs/ext
     chown genieacs. /opt/genieacs/ext -R
@@ -62,8 +62,8 @@ Com a pasta criada, copie os arquivos localizado na pasta ext do projeto para a 
     chmod 600 /opt/genieacs/ext/getClientes
     chmod 600 /opt/genieacs/ext/getMacwan
 
-Após isso acesse ambos arquivos, getClientes e getMacwan que copiamos e iremos adicionar o token que foi criado dentro do arquivo .env e adicionar o nome do provedor para concatenar com o SSSID e SENHA do wifi.
-O SSID do roteador é gerado usando a seguinte moneclatura PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC para o 2.4 e
+Após isso acesse ambos arquivos, getClientes e getMacwan que copiamos, pois iremos adicionar o token que foi criado dentro do arquivo .env e adicionar o nome do provedor para concatenar com o SSSID e SENHA do wifi.
+O SSID do roteador é gerado usando a seguinte moneclatura PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC para o 2.4
 *EXEMPLO: JEFFSON_PROVEDOR_44D0*
 PRIMEIRONOMEDOCLIENTE_NOMEPROVEDOR_4DIGITOSFINAISDOMAC_5G para o 5GHZ
 *EXEMPLO: JEFFSON_PROVEDOR_44D0_5G*
@@ -154,6 +154,18 @@ O quarto Virtual Parametro que iremos criar é o ppp_username
 Dentro da wiki do hubsoft se encontra como é adicionado a integração do lado do ERP com o GenieACS e como definir os parametros customizados para cada tipo de roteador para evitar problemas de comunicação com diferentes tipos de roteadores
 Documentação para integração: https://wiki.hubsoft.com.br/pt-br/modulos/configuracao/integracao/gerenciador_cpe/integrar-cpe
 Documentação para parametrização: https://wiki.hubsoft.com.br/pt-br/atualizacoes/versao_1_94#h-22-melhorias-na-integra%C3%A7%C3%A3o-genieacs
+
+## Preset
+Todos os roteadores que for utilizado é recomendo o uso do preset (firmware customizado), para adicionar o valores padrões. cada fabricante tem um modo de subir o preset consulte seu fornecedor. lembre-se que no preset é necessário apenas o usuario padrão "tr069" e a senha do pppoe, os dados do tr069 preenchidos, senha padrão de acesso web e se a empresa usar a porta de acesso remoto habilitado e porta padrão alterada
+Dados do tr069 para ser prenchidos
+- url (http://ipdoservidor:7547)
+- nome de usuario (usuario que foi criado no genieacs)
+- senha (senha que foi criada no genieacs)
+- Informativos periódicos: Habilitado
+- Intervalo de Informativos periódicos: 60
+- Caminho: /tr069 (se houver)
+- Porta: 7547
+Lembrando que não pode possuir NAT e nme CGNAT entre o servidor e os roteadores.
 
 ## Como Contribuir
 - clone o projeto
