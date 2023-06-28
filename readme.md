@@ -111,19 +111,19 @@ Nessa parte iremos criar alguns parametros dentro do sistema para o funcionament
 
 ### Editando os Provisions
 Nessa etapa iremos editar dois provisions dentro do sistema do GenieACS. </br>
-Os provisions são responsáveis por executar os comandos de provisionamento, ou seja, eles que podemos realizar as chamadas para alterar os parâmetros das cpe de forma automática e declarar os parâmetros para o sistema consultar.</br>
+Os provisions são responsáveis por executar os comandos de provisionamento, ou seja, podemos realizar as chamadas para alterar os parâmetros das cpe de forma automática e declarar os parâmetros para o sistema Genieacs consultar.</br>
 Iremos editar duas provisions que são a default e a inform.</br>
 O primeiro que iremos editar é o provision default
 
     ## Copie as informações que está no projeto dentro da pasta 
-    cat /opt/tr069/GenieACS/provisions/default ou acesse a url (https://github.com/jeffsoncavalcante/tr069/blob/main/GenieACS/provisions/default)
+    /opt/tr069/GenieACS/provisions/default ou acesse a url (https://github.com/jeffsoncavalcante/tr069/blob/main/GenieACS/provisions/default)
     ## Dentro do GenieACS navegue até admin -> provisions 
     Clique em show no provision com o nome default e apague tudo que está dentro e cole o contéudo copiado do arquivo default do projeto
     
 O segundo que iremos editar é o provision inform
 
     ## Copie as informações que está no projeto dentro da pasta 
-    cat /opt/tr069/GenieACS/provisions/inform ou acesse a url (https://github.com/jeffsoncavalcante/tr069/blob/main/GenieACS/provisions/inform)
+    /opt/tr069/GenieACS/provisions/inform ou acesse a url (https://github.com/jeffsoncavalcante/tr069/blob/main/GenieACS/provisions/inform)
     ## Dentro do GenieACS navegue até admin -> provisions
     Clique em show no provision com o nome inform e apague tudo que está dentro e cole o contéudo copiado do arquivo default do projeto
 
@@ -134,7 +134,7 @@ O segundo que iremos editar é o provision inform
 Portanto dentro do seu sistema Hubsoft, crie um serviço (plano) com o mesmo login para funcionar a internet, pois o roteador precisa de conexão para se conectar no GenieACS, a senha do pppoe pode ser usada a mesma que o sistema gera. </br>
 O usuario e senha do pppoe é apenas provisiorio, pois logo que o roteador se conectar no GenieACS irá ser alterado para os dados do pppoe do cliente.
 ### Criando Virtual Parameters
-Nesse momento iremos criar 4 virtual parametros que irá auxiliar nos scritps e na integração com o Hubsoft. </br>
+Nesse momento iremos criar 4 virtuais parametros que irá auxiliar nos scritps e na integração com o Hubsoft. </br>
 Os scripts dos Virutal Parametros estão localizado em /opt/tr069/GenieACS/virtual_parameters ou na url (https://github.com/jeffsoncavalcante/tr069/tree/main/GenieACS/virtual_parameters)</br>
 Dentro do GenieACS navegue até admin -> Virtual Parameters</br></br>
 
@@ -163,16 +163,16 @@ Dentro da wiki do hubsoft se encontra o precedimento para adicionar a integraç�
 Documentação para integração:
 </br>
 https://wiki.hubsoft.com.br/pt-br/modulos/configuracao/integracao/gerenciador_cpe/integrar-cpe </br>
-Documentação para parametrização: </br>
+Documentação parâmetro customizado: </br>
 https://wiki.hubsoft.com.br/pt-br/atualizacoes/versao_1_94#h-22-melhorias-na-integra%C3%A7%C3%A3o-genieacs
 
 ## Preset
-Todos os roteadores que for utilizado é recomendo o uso do preset (firmware customizado), para adicionar o valores padrões.</br> cada fabricante tem um modo de subir o preset consulte seu fornecedor. </br>
+Todos os roteadores que for ser utilizado é recomendo o uso do preset (firmware customizado), para adicionar o valores padrões.</br> cada fabricante tem um modo de subir o preset consulte seu fornecedor. </br>
 lembre-se que no preset é necessário apenas os
 - Usuario padrão "tr069" e a senha do pppoe.
 - Dados do tr069 preenchidos.
 - Senha padrão de acesso web.
-- Se a empresa usar a porta de acesso remoto habilitar
+- Se a empresa usar acesso remoto habilitar
 -  Alterar porta padrão de acesso web. </br>
 Dados do tr069 para ser prenchidos
 - url (http://ipdoservidor:7547)
