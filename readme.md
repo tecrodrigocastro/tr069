@@ -134,7 +134,7 @@ O segundo que iremos editar é o provision inform
 Portanto dentro do seu sistema Hubsoft, crie um serviço (plano) com o mesmo login para funcionar a internet, pois o roteador precisa de conexão para se conectar no GenieACS, a senha do pppoe pode ser usada a mesma que o sistema gera. </br>
 O usuario e senha do pppoe é apenas provisiorio, pois logo que o roteador se conectar no GenieACS irá ser alterado para os dados do pppoe do cliente.
 ### Criando Virtual Parameters
-Nessa momento iremos criar 4 virutal parametros que irá auxiliar nos scritps e na integração com o Hubsoft. </br>
+Nessa momento iremos criar 4 virtual parametros que irá auxiliar nos scritps e na integração com o Hubsoft. </br>
 Os scripts dos Virutal Parametros estão localizado em /opt/tr069/GenieACS/virtual_parameters ou na url (https://github.com/jeffsoncavalcante/tr069/tree/main/GenieACS/virtual_parameters)</br>
 Dentro do GenieACS navegue até admin -> Virtual Parameters</br></br>
 
