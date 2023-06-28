@@ -164,4 +164,4 @@ Documentação para parametrização: https://wiki.hubsoft.com.br/pt-br/atualiza
 
 ## Contatos e Suporte
 - E-mail: jeffsonvitor69@gmail.com
-- Telegram: t.me/jeffsoncavalcante
+- Telegram: https://t.me/jeffsoncavalcante
