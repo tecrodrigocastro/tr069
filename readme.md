@@ -47,9 +47,10 @@ os parametros que devem ser alterados são:</br>
 5. HUB_PORT (porta de acesso ao banco)
 6. HUB_DATABASE (nome do banco de dados)
 
-
-    cd /opt/tr069/src
-    vi .env
+   cd /opt/tr069/src </br>
+   vi .env
+   
+</br>
 Após o arquivo .env configurado verique se a pasta ext se encontra criada no diretório.
 
     ls -l /opt/genieacs/
