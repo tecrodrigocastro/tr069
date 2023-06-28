@@ -31,6 +31,7 @@ Clone o projeto
     
     cd /opt
     git clone https://github.com/jeffsoncavalcante/tr069.git
+    npm install
     
 Edite o arquivo .env</br>
 Dentro do arquivo se encontra as variáveis de ambiente da api</br>
@@ -100,10 +101,11 @@ Nessa parte iremos criar alguns parametros dentro do sistema para o funcionament
 
 1. Acesse o sistema do GenieACS: http://ipdoservidor:3000
 2. Acesse com as credenciais (padrão: admin, admin) 
-3. Crie um novo usuario para o ser utilizado na configuração do roteador. admin -> users (pode ser como admin "Não recomendavel")
+3. Crie um novo usuario para o ser utilizado na configuração do roteador e outro pra o Hubsoft utilizar.</br> admin -> users (pode ser como admin "Não recomendavel")
 
 ### Editando os Provisions
-Nessa etapa iremos editar dois provisions dentro do sistema do GenieACS, o provision é responsavel por executar os comandos de provisionamento, ou seja neles que podemos realizar as chamadas para alterar os parametros das cpe de forma automatica e declarar os parametros para o sistema consultar.</br>
+Nessa etapa iremos editar dois provisions dentro do sistema do GenieACS. </br>
+Os provisions são responsáveis por executar os comandos de provisionamento, ou seja, eles que podemos realizar as chamadas para alterar os parâmetros das cpe de forma automática e declarar os parâmetros para o sistema consultar.</br>
 Iremos editar duas provisions que são a default e a inform.</br>
 O primeiro que iremos editar é o provision default
 
@@ -123,7 +125,7 @@ O segundo que iremos editar é o provision inform
 
     let default_user_pppoe = 'tr069';
 
-Portanto dentro do seu sistema Hubsoft, crie um serviço com o mesmo login para funcionar a internet, pois o roteador precisa de conexão para se conectar no GenieACS, a senha do pppoe pode ser usada a mesma que o sistema gera. </br>
+Portanto dentro do seu sistema Hubsoft, crie um serviço (plano) com o mesmo login para funcionar a internet, pois o roteador precisa de conexão para se conectar no GenieACS, a senha do pppoe pode ser usada a mesma que o sistema gera. </br>
 O usuario e senha do pppoe é apenas provisiorio, pois logo que o roteador se conectar no GenieACS irá ser alterado para os dados do pppoe do cliente.
 ### Criando Virtual Parameters
 Nessa momento iremos criar 4 virutal parametros que irá auxiliar nos scritps e na integração com o Hubsoft. </br>
@@ -133,31 +135,39 @@ Dentro do GenieACS navegue até admin -> Virtual Parameters</br></br>
 O primeiro Virtual Parametro que iremos criar é o MACAddress
 1. Clique em new 
 2. no campo name coloque o MACAddress
-3. Copie o scritp dentro do arquivo MACAddress no diretório informado acima e cole dentro do campo Script no GenieACS
+3. Copie o script dentro do arquivo MACAddress no diretório informado acima e cole dentro do campo Script no GenieACS
 
 O segundo Virtual Parametro que iremos criar é o MAC
 1. Clique em new 
 2. no campo name coloque o MAC
-3. Copie o scritp dentro do arquivo MAC no diretório informado acima e cole dentro do campo Script no GenieAC
+3. Copie o script dentro do arquivo MAC no diretório informado acima e cole dentro do campo Script no GenieAC
 
 O terceiro Virtual Parametro que iremos criar é o Ip
 1. Clique em new 
 2. no campo name coloque o Ip
-3. Copie o scritp dentro do arquivo Ip no diretório informado acima e cole dentro do campo Script no GenieACS
+3. Copie o script dentro do arquivo Ip no diretório informado acima e cole dentro do campo Script no GenieACS
 
 O quarto Virtual Parametro que iremos criar é o ppp_username
 1. Clique em new 
 2. no campo name coloque o ppp_username
-3. Copie o scritp dentro do arquivo ppp_username no diretório informado acima e cole dentro do campo Script no GenieACS
+3. Copie o script dentro do arquivo ppp_username no diretório informado acima e cole dentro do campo Script no GenieACS
 
 ## Configuração GenieACS no Hubsoft
-Dentro da wiki do hubsoft se encontra como é adicionado a integração do lado do ERP com o GenieACS e como definir os parametros customizados para cada tipo de roteador para evitar problemas de comunicação com diferentes tipos de roteadores </br>
-Documentação para integração: https://wiki.hubsoft.com.br/pt-br/modulos/configuracao/integracao/gerenciador_cpe/integrar-cpe
-Documentação para parametrização: https://wiki.hubsoft.com.br/pt-br/atualizacoes/versao_1_94#h-22-melhorias-na-integra%C3%A7%C3%A3o-genieacs
+Dentro da wiki do hubsoft se encontra o precedimento para adicionar a integração do lado do ERP com o GenieACS e como definir os parametros customizados para cada tipo de roteador.</br>
+Documentação para integração:
+</br>
+https://wiki.hubsoft.com.br/pt-br/modulos/configuracao/integracao/gerenciador_cpe/integrar-cpe </br>
+Documentação para parametrização: </br>
+https://wiki.hubsoft.com.br/pt-br/atualizacoes/versao_1_94#h-22-melhorias-na-integra%C3%A7%C3%A3o-genieacs
 
 ## Preset
-Todos os roteadores que for utilizado é recomendo o uso do preset (firmware customizado), para adicionar o valores padrões. cada fabricante tem um modo de subir o preset consulte seu fornecedor. </br>
-lembre-se que no preset é necessário apenas o usuario padrão "tr069" e a senha do pppoe, os dados do tr069 preenchidos, senha padrão de acesso web e se a empresa usar a porta de acesso remoto habilitado e porta padrão alterada. </br>
+Todos os roteadores que for utilizado é recomendo o uso do preset (firmware customizado), para adicionar o valores padrões.</br> cada fabricante tem um modo de subir o preset consulte seu fornecedor. </br>
+lembre-se que no preset é necessário apenas os
+- Usuario padrão "tr069" e a senha do pppoe.
+- Dados do tr069 preenchidos.
+- Senha padrão de acesso web.
+- Se a empresa usar a porta de acesso remoto habilitar
+-  Alterar porta padrão de acesso web. </br>
 Dados do tr069 para ser prenchidos
 - url (http://ipdoservidor:7547)
 - nome de usuario (usuario que foi criado no genieacs)
@@ -166,6 +176,7 @@ Dados do tr069 para ser prenchidos
 - Intervalo de Informativos periódicos: 60
 - Caminho: /tr069 (se houver)
 - Porta: 7547
+</br>
 Lembrando que não pode possuir NAT e nme CGNAT entre o servidor e os roteadores.
 
 ## Como Contribuir
