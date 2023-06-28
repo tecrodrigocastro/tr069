@@ -35,6 +35,7 @@ Clone o projeto
     
     cd /opt
     git clone https://github.com/jeffsoncavalcante/tr069.git
+    cd /tr069
     npm install
     
 Edite o arquivo .env</br>
