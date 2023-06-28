@@ -163,5 +163,5 @@ Documentação para parametrização: https://wiki.hubsoft.com.br/pt-br/atualiza
 - git push origin head
 
 ## Contatos e Suporte
-E-mail: jeffsonvitor69@gmail.com
-Telegram: t.me/jeffsoncavalcante
+- E-mail: jeffsonvitor69@gmail.com
+- Telegram: t.me/jeffsoncavalcante
