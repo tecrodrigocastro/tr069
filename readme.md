@@ -39,6 +39,10 @@ Clone o projeto
     npm install
     
 Edite o arquivo .env</br>
+
+    cd /opt/tr069/src
+    vi .env
+
 Dentro do arquivo se encontra as variáveis de ambiente da api</br>
 os parametros que devem ser alterados são:</br>
 1. TOKEN (Criar um hash forte para proteger a aplicação, o mesmo será usada no genieacs )
@@ -48,10 +52,6 @@ os parametros que devem ser alterados são:</br>
 5. HUB_PORT (porta de acesso ao banco)
 6. HUB_DATABASE (nome do banco de dados)
 
-   cd /opt/tr069/src </br>
-   vi .env
-   
-</br>
 Após o arquivo .env configurado verique se a pasta ext se encontra criada no diretório.
 
     ls -l /opt/genieacs/
