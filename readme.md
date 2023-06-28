@@ -9,7 +9,9 @@ Esse projeto permite a alteração dos seguintes campos de forma automatica:
 - Usuario e senha do pppoe
 - SSID e Senha do Wi-Fi 2.4Ghz e 5Ghz
 
-Para esse projeto funcionar corretamente, quando o roteador novo estiver sendo instalado, é necessario que o Técnico esteja com a Ordem de Serviço em execução e o equipamento (CPE) no estoque do Técnico.</br>
+Para esse projeto funcionar 
+
+corretamente, quando o roteador novo estiver sendo instalado, é necessario que o Técnico esteja com a Ordem de Serviço em execução e o equipamento (CPE) no estoque do Técnico.</br>
 Além disso todos as CPE precisa obrigatóriamente conter o MAC LAN do roteador *(É o mesmo mac que vem no fundo do Roteador e na caixa do equipamento)* dentro do campo mac do produto, que pode ser adicionado no momento do cadastro da compra do produto ou editado em estoque->itens de produto.</br>
 Como também é necessario acesso ao banco de dados do sistema no modo leitura, devido que a API publica do ERP HUBSOFT não oferece a rota para consultar os dados do cliente via mac wan e nem mac lan.
 
