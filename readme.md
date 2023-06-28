@@ -179,7 +179,7 @@ Dados do tr069 para ser prenchidos
 - nome de usuario (usuario que foi criado no genieacs)
 - senha (senha que foi criada no genieacs)
 - Informativos periódicos: Habilitado
-- Intervalo de Informativos periódicos: 60
+- Intervalo de Informativos periódicos: 300
 - Caminho: /tr069 (se houver)
 - Porta: 7547
 </br>
