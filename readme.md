@@ -183,7 +183,7 @@ Dados do tr069 para ser prenchidos
 - Caminho: /tr069 (se houver)
 - Porta: 7547
 </br>
-Lembrando que não pode possuir NAT e nme CGNAT entre o servidor e os roteadores.
+Lembrando que não pode possuir NAT e nem CGNAT entre o servidor e os roteadores.
 
 ## Como Contribuir
 - clone o projeto
