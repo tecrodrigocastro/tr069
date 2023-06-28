@@ -12,6 +12,7 @@ Esse projeto permite a alteração dos seguintes campos de forma automatica:
 Para esse projeto funcionar corretamente, quando o roteador novo estiver sendo instalado, é necessario que o Técnico esteja com a Ordem de Serviço em execução e o equipamento (CPE) no estoque do Técnico.
 Além disso todos as CPE precisa obrigatóriamente conter o MAC LAN do roteador *(É o mesmo mac que vem no fundo do Roteador e na caixa do equipamento)* dentro do campo mac do produto, que pode ser adicionado no momento do cadastro da compra do produto ou editado em estoque->itens de produto.
 Como também é necessario acesso ao banco de dados do sistema no modo leitura, devido que a API publica do ERP HUBSOFT não oferece a rota para consultar os dados do cliente via mac wan e nem mac lan.
+
 --------
 ***ATENÇÃO*** 
 *DEIXAR OS DADOS EM UM SERVIDOR SEGURO PARA EVITAR VAZAMENTO DA CRENDENCIAIS, PREFERENCIALMENTE INSTALE A API E O GENIEACS EM UM SERVIDOR LOCAL E IP PRIVADO E SOLICITE QUE LIBERE O ACESSO AO BANCO APENAS PARA O IP DO SERVIDOR PARA MAIOR SEGURANÇA*
